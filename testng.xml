@@ -1,0 +1,16 @@
+<suite name="SDET Final Project">
+<listeners>
+    <listener class-name="org.example.utils.TestListener" />
+</listeners>
+
+<test name="Veli Store Testing">
+    <classes>
+        <class name="org.example.tests.LoginTest"/>
+        <class name="org.example.tests.CartTest"/>
+        <class name="org.example.tests.ChatTest"/>
+        <class name="org.example.tests.WishlistTest"/>
+        <class name="org.example.tests.ApiTest"/>
+    </classes>
+</test>
+
+</suite>
