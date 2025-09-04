@@ -1,38 +1,66 @@
-Automation Testing at veli.store
+Veli.store Automation Testing
 
-This is a testing project automated using Java and Selenium, built on the Page Object Model (POM) architecture. The project covers testing of the core functionalities of the veli.store website. As a result of the test cases, various functionalities were tested, including:
+Automated testing framework for veli.store built with Java + Selenium WebDriver.
+The project uses the Page Object Model (POM) design pattern and validates key e-commerce functionalities.
 
-• User login and header text validation after authorization
+✅ Test Coverage
+As a result of the test cases, various functionalities were tested, including:
 
-• Verification of the login button background color
+-   Authentication
 
-• Searching for desired product, adding it to cart and validate the results
+1) Login with valid credentials
 
-• Adding and removing a product from wishlist
+2) Verify login button background color
 
-• Using chat for authorized user in non working hours
+- Shopping Cart
 
+1) Add random product to cart and validate
 
-Technology:
+- Wishlist
 
-• Language: Java
-• Build tool: Apache Maven
+1) Add product to wishlist
 
-• Browser automation: Selenium WebDriver
+2) Remove product from wishlist
 
-• Test management and execution: TestNG
+- Filters
 
-• Automatic driver management: WebDriverManager
+1) Apply price filter on product category
 
-• For test reporting: ExtentReports
+2) Validate results match price range
 
-• For API testing: Rest-Assured
+- API Tests
 
-Global Config
+1) Basic API validations with Rest-Assured
 
-In the project, a global configuration file named config.properties is used. This configuration contains information related to the base URL and the timeout seconds.
+🛠 Tech Stack
+| Purpose            | Tool/Library       |
+| ------------------ | ------------------ |
+| Language           | Java               |
+| Build Tool         | Apache Maven       |
+| Browser Automation | Selenium WebDriver |
+| Test Execution     | TestNG             |
+| Driver Management  | WebDriverManager   |
+| Reporting          | ExtentReports      |
+| API Testing        | Rest-Assured       |
 
-How to run tests
-You can run the test cases in two different ways:
-    1. Using testng.xml file: Simply right-click the testng.xml file in your IDE and select Run. This will execute all test cases defined in the suite.
-    2. Using the terminal with Maven: Run the following command from the root directory of the project: "mvn clean test". This will compile the project and execute all test cases automatically.
+⚙ Configuration
+
+- Global settings stored in config.properties
+
+1) Base URL
+
+2) Timeout values
+
+▶ Running Tests
+
+Option 1: testng.xml (via IDE)
+Right-click testng.xml → Run
+
+Option 2: Maven (via terminal)
+mvn clean test
+
+📊 Reports
+
+- ExtentReports generates interactive HTML reports
+
+- Includes logs, pass/fail/skip status, and error stack traces

@@ -17,14 +17,11 @@ public class Utils {
         System.out.println(message);
     }
 
-
     public static void logPass(String message) {
         if (ExtentReportManager.getTest() != null){
             ExtentReportManager.getTest().pass(message);
         }
         System.out.println(message);
     }
-
-
 
 }

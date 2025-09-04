@@ -2,17 +2,7 @@ package org.example.tests;
 import org.example.BaseTest;
 import org.example.pages.DashboardPage;
 import org.example.pages.LoginPage;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
-
-// აღწერეთ თქვენს მიერ დაწერილი მეთოდები კომენტარის სახით (ქომონ მეთოდები)
-//
-// გამოიყენეთ ასევე restAssured ( კონკრეტულად კი შემდეგი ლოგიკით:
-// შექმენით ცალკე კლასი სადაც იქნება თავმოყრილი restassured მეთოდები და თუნდაც ერთი get მეთოდი გამოიყენეთ ფრეიმვორქში.
-// ანუ ერთი ქეისი დაწერეთ რომელიც შეამოწმებს მაგალითად სტატუს კოდს ან რაიმეს რესპონსიდან.
-// სატესტოდ შეგიძლიათ გამოიყენოთ : https://reqres.in სატესტო api.)
 
 
 public class LoginTest extends BaseTest {
@@ -32,8 +22,8 @@ public class LoginTest extends BaseTest {
         loginPage.refreshPage();
     }
 
-    @Test(testName = "Login Button Text Color")
-    public void loginButtonTextColor() {
+    @Test(testName = "Login Button Background Text Color")
+    public void testLoginButtonTextColor() {
         // 1 login with correct credentials
         LoginPage loginPage = new LoginPage(driver);
 

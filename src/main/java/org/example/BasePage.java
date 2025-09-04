@@ -18,7 +18,7 @@ public class BasePage {
 
     public BasePage (WebDriver driver) {
         this.driver = driver;
-        int timeout = Integer.parseInt(ConfigReader.getProperty("timeout.seconds", "10"));
+        int timeout = Integer.parseInt(ConfigReader.getProperty("timeout.seconds", "15"));
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
     }
 
@@ -57,14 +57,6 @@ public class BasePage {
         driver.navigate().refresh();
         Utils.logInfo("refresh page: " + driver.getCurrentUrl());
     }
-
-
-//    public void clickOnFirstProduct() {
-//        WebElement firstProduct = driver.findElement(By.cssSelector("a.product-link"));
-//        wait.until(ExpectedConditions.elementToBeClickable(firstProduct));
-//        firstProduct.click();
-//        wait.until(ExpectedConditions.urlContains("/product/"));
-//    }
 
     public String getCurrentUrl () {
         Utils.logInfo("get current url: " + driver.getCurrentUrl());
